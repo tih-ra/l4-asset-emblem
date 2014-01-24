@@ -20,7 +20,7 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
     {
         $relativePath = ltrim($this->getRelativePath($this->basePath, $asset->getSourceRoot() . '/'), '/');
         $filename =  pathinfo($asset->getSourcePath(), PATHINFO_FILENAME);
-        $dirname = dirname($filename);
+        $dirname = $asset->getSourcePath();
         $filename = pathinfo($filename, PATHINFO_FILENAME);
         
 
