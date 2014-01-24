@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Laravel 4 Asset Pipeline Package For Emblem.js
 
 Bring in your `.emblem` templates into your Laravel 4 application.
@@ -49,6 +48,5 @@ Now create a file `app/assets/javascripts/myfirst.jst.hbs`
 After refreshing the page inspect JST object in the javascript console and the function
 
 ```
-	JST['myfirst']({smeagol: 'precious!!!'})
   Ember.TEMPLATES["mytemplate"] = Emblem.compile(Ember.Handlebars, "template content");
 ```
