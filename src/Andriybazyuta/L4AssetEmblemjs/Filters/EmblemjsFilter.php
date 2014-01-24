@@ -26,10 +26,10 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
         $content = str_replace(PHP_EOL, "\\n", $content);
         
         //$jst = 'JST = (typeof JST === "undefined") ? JST = {} : JST;' . PHP_EOL;
-        $jst = 'Ember.TEMPLATES["' . $filename . '"] = Emblem.compile(Handlebars, "';
-        $jst .= $content;
-        $jst .= '");' . PHP_EOL;
+        $emblem = 'Ember.TEMPLATES["' . $filename . '"] = Emblem.compile(Ember.Handlebars, "';
+        $emblem .= $content;
+        $emblem .= '");' . PHP_EOL;
 
-        $asset->setContent($jst);
+        $asset->setContent($emblem);
     }
 }
