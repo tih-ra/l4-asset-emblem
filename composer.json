@@ -1,0 +1,25 @@
+{
+    "name": "andriybazyuta/l4-asset-emblem",
+    "description": "Laravel 4 Asset Pipeline Package For Emblem.js",
+    "authors": [
+        {
+            "name": "Andriy Bazyuta",
+            "email": "andriy.bazyuta@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.*"
+    },
+    "require-dev": {
+        "codesleeve/asset-pipeline": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-0": {
+            "Andriybazyuta\\L4AssetEmblemjs": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
