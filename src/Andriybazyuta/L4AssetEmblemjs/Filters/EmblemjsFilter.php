@@ -23,7 +23,7 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
         
         $filename = pathinfo($filename, PATHINFO_FILENAME);
         
-        $dirname = dirname($relativePath);
+        $dirname = dirname($relativePath . $filename);
 
         $content = str_replace('"', '\\"', $asset->getContent());
         $content = str_replace(PHP_EOL, "\\n", $content);
