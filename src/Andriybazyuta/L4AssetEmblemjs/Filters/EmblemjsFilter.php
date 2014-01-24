@@ -21,12 +21,13 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
         $relativePath = ltrim($this->getRelativePath($this->basePath, $asset->getSourceRoot() . '/'), '/');
         $filename =  pathinfo($asset->getSourcePath(), PATHINFO_FILENAME);
         $filename = pathinfo($filename, PATHINFO_FILENAME);
+        $dirname = dirname($asset->getSourcePath());
 
         $content = str_replace('"', '\\"', $asset->getContent());
         $content = str_replace(PHP_EOL, "\\n", $content);
         
         //$jst = 'JST = (typeof JST === "undefined") ? JST = {} : JST;' . PHP_EOL;
-        $emblem = 'Ember.TEMPLATES["' . $filename . '"] = Emblem.compile(Ember.Handlebars, "';
+        $emblem = 'Ember.TEMPLATES["' . $dirname . $filename . '"] = Emblem.compile(Ember.Handlebars, "';
         $emblem .= $content;
         $emblem .= '");' . PHP_EOL;
 
