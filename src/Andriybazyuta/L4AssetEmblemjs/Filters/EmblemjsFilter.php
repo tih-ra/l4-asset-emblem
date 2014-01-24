@@ -24,7 +24,7 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
         $filename = pathinfo($filename, PATHINFO_FILENAME);
         
         $dirname = explode("templates/", dirname($relativePath . $filename) . '/')
-        $parent_dir = (count($dirname) > 0) ? $dirname[1] : ""
+        $parent_dir = ((count($dirname) > 0) ? $dirname[1] : "")
 
         $content = str_replace('"', '\\"', $asset->getContent());
         $content = str_replace(PHP_EOL, "\\n", $content);
