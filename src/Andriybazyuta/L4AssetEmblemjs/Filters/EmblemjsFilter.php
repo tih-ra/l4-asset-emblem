@@ -26,7 +26,7 @@ class EmblemjsFilter extends FilterHelper implements FilterInterface
         $content = str_replace(PHP_EOL, "", $content);
 
         //$jst = 'JST = (typeof JST === "undefined") ? JST = {} : JST;' . PHP_EOL;
-        $jst .= 'Ember.TEMPLATE["' . $filename . '"] = Emblem.compile(Handlebars, "';
+        $jst = 'Ember.TEMPLATE["' . $filename . '"] = Emblem.compile(Handlebars, "';
         $jst .= $content;
         $jst .= '");' . PHP_EOL;
 
